@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SocialMediaManagement": {
+    "kestrel": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
