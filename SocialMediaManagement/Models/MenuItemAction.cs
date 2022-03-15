@@ -13,6 +13,10 @@ namespace SocialMediaManagement.Models
         public string ItemActionName { get; set; }
 
         public virtual MenuItem MenuItem { get; set; }
+        public virtual ICollection<GroupIActionRelation> GroupIActionRelations { get; set; }
+
+
+
 
     }
 }

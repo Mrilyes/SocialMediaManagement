@@ -21,5 +21,7 @@ namespace SocialMediaManagement.Data
         public DbSet<Group> Groups { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<MenuItemAction> MenuItemActions { get; set; }
+        public DbSet<GroupItemRelation> GroupItemRelations { get; set; }
+        public DbSet<GroupIActionRelation> GroupIActionRelations { get; set; }
     }
 }

@@ -14,5 +14,8 @@ namespace SocialMediaManagement.Models
 
         public virtual ICollection<User> Users { get; set; }
 
+        public virtual ICollection<GroupItemRelation> GroupItemRelations { get; set; }
+        public virtual ICollection<GroupIActionRelation> GroupIActionRelations { get; set; }
+
     }
 }

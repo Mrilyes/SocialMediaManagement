@@ -15,5 +15,9 @@ namespace SocialMediaManagement.Models
         public int Visible { get; set; }
         public string Icon { get; set; }
         public virtual ICollection<MenuItemAction> MenuItemActions { get; set; }
+        public virtual ICollection<GroupItemRelation> GroupItemRelations { get; set; }
+
+
     }
+
 }
