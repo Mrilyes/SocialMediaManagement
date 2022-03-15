@@ -13,7 +13,7 @@ namespace SocialMediaManagement.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<int>(
-                name: "MenuItemItemID",
+                name: "ItemID",
                 table: "MenuItemActions",
                 type: "int",
                 nullable: true);
@@ -24,14 +24,14 @@ namespace SocialMediaManagement.Migrations
                 column: "GroupID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MenuItemActions_MenuItemItemID",
+                name: "IX_MenuItemActions_ItemID",
                 table: "MenuItemActions",
-                column: "MenuItemItemID");
+                column: "ItemID");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_MenuItemActions_MenuItems_MenuItemItemID",
+                name: "FK_MenuItemActions_MenuItems_ItemID",
                 table: "MenuItemActions",
-                column: "MenuItemItemID",
+                column: "ItemID",
                 principalTable: "MenuItems",
                 principalColumn: "ItemID",
                 onDelete: ReferentialAction.Restrict);
@@ -48,7 +48,7 @@ namespace SocialMediaManagement.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_MenuItemActions_MenuItems_MenuItemItemID",
+                name: "FK_MenuItemActions_MenuItems_ItemID",
                 table: "MenuItemActions");
 
             migrationBuilder.DropForeignKey(
@@ -60,7 +60,7 @@ namespace SocialMediaManagement.Migrations
                 table: "Users");
 
             migrationBuilder.DropIndex(
-                name: "IX_MenuItemActions_MenuItemItemID",
+                name: "IX_MenuItemActions_ItemID",
                 table: "MenuItemActions");
 
             migrationBuilder.DropColumn(
@@ -68,7 +68,7 @@ namespace SocialMediaManagement.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "MenuItemItemID",
+                name: "ItemID",
                 table: "MenuItemActions");
         }
     }
