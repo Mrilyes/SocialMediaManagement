@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SocialMediaManagement.Controllers
 {
-    public class HomeController : Controller
+    public class HomePageController : Controller
     {
      
         public IActionResult Index()
@@ -21,11 +21,15 @@ namespace SocialMediaManagement.Controllers
         {
             return View();
         }
+        public IActionResult blabla()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        } 
     }
 }
