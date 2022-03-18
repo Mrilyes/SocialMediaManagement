@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SocialMediaManagement.Data;
+using SocialMediaManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +29,15 @@ namespace SocialMediaManagement
         {
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MySocialMediaManagmentApp")));
+
+            services.ConfigureApplicationCookie(Config =>
+                  Config.Cookie.Name = "SocialMediaManagmentCookies");
+
+            services.AddIdentityCore<User>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +58,8 @@ namespace SocialMediaManagement
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -54,6 +67,7 @@ namespace SocialMediaManagement
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=HomePage}/{action=Index}/{id?}");
+                    endpoints.MapRazorPages();
             });
         }
     }

@@ -15,9 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
     <link href="~/HomePageTemplate/css/site.css" rel="stylesheet" />
     <link href="~/HomePageTemplate/css/ampshared.css" rel="stylesheet" />
     <link href="~/HomePageTemplate/css/buttom.css" rel="stylesheet" />
+    <link href="~/HomePageTemplate/css/signup.css" rel="stylesheet" />
+
 </head>
 <body>
 
@@ -32,8 +36,8 @@
     @*Footer part*@
 
     @Html.Partial("_Footer")
-
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
          
-            @await RenderSectionAsync("Scripts", required: false)
+            
