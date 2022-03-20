@@ -25,8 +25,7 @@ namespace SocialMediaManagement.Data
             builder.Entity<User>().ToTable("Users");
         }
 
-
-
+        public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<MenuItemAction> MenuItemActions { get; set; }
