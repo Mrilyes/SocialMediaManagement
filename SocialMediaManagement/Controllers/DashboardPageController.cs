@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SocialMediaManagement.Models;
 using System;
@@ -11,7 +12,7 @@ namespace SocialMediaManagement.Controllers
 {
     public class DashboardPageController : Controller
     {
-     
+     [Authorize]
         public IActionResult Index()
         {
             return View();
