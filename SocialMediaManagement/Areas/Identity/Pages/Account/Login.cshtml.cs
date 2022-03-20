@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using SocialMediaManagement.Models;
+using System.Net.Mail;
 
 namespace SocialMediaManagement.Areas.Identity.Pages.Account
 {
@@ -44,7 +45,7 @@ namespace SocialMediaManagement.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [Display(Name ="Email or UserName")]
             public string Email { get; set; }
 
 
@@ -79,19 +80,16 @@ namespace SocialMediaManagement.Areas.Identity.Pages.Account
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-        
+
+            var username = new EmailAddressAttribute().IsValid(Input.Email) ? _userManager.FindByEmailAsync(Input.Email).Result.UserName : Input.Email;
+
             if (ModelState.IsValid)
             {
-                var user = new User
-                {
-           
-                    Email = Input.Email
-                  
-                };
+                
 
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(username, Input.Password, Input.RememberMe, lockoutOnFailure: false);
 
 
                 if (result.Succeeded)
