@@ -1,0 +1,641 @@
+﻿.u-alignHMiddle {
+    margin: auto
+}
+
+.u-alignCenter {
+    margin: 0 auto
+}
+
+.u-sizeMedium {
+    width: 100%;
+    max-width: 640px
+}
+
+.u-sizeLarge {
+    width: 100%;
+    max-width: 920px
+}
+
+.u-sizeXL {
+    width: 100%;
+    max-width: 1440px
+}
+
+.u-sizeXXL {
+    width: 100%;
+    max-width: 2050px
+}
+
+.u-textAlignLeft {
+    text-align: left
+}
+
+.u-textAlignRight {
+    text-align: right
+}
+
+.u-textAlignCenter {
+    text-align: center
+}
+
+.u-whiteSpaceNoWrap {
+    white-space: nowrap
+}
+
+.u-wordBreakBreakWord {
+    word-break: break-word
+}
+
+.Tooltip {
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 13px;
+    line-height: 1.641025641025641;
+    z-index: 9999;
+    animation: fadeIn .6s cubic-bezier(.4,0,.2,1)
+}
+
+.Tooltip-header {
+    font-weight: 600
+}
+
+.Tooltip-children {
+    display: block
+}
+
+.Tooltip-content {
+    position: relative;
+    max-width: 280px;
+    padding: 8px;
+    word-wrap: break-word;
+    display: block;
+    border-radius: 6px
+}
+
+    .Tooltip-content._light, .Tooltip-content._network {
+        color: #364141;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(22,32,32,.2)
+    }
+
+    .Tooltip-content._network {
+        padding: 0
+    }
+
+    .Tooltip-content._dark {
+        color: #f3f4f4;
+        background-color: #273333
+    }
+
+    .Tooltip-content:after, .Tooltip-content:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        display: block
+    }
+
+.Tooltip._bottom .Tooltip-content {
+    top: -8px
+}
+
+    .Tooltip._bottom .Tooltip-content._dark:after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #273333;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0
+    }
+
+    .Tooltip._bottom .Tooltip-content._light:before, .Tooltip._bottom .Tooltip-content._network:before {
+        bottom: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgba(22,32,32,.4);
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0
+    }
+
+    .Tooltip._bottom .Tooltip-content._light:after, .Tooltip._bottom .Tooltip-content._network:after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #fff;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0
+    }
+
+    .Tooltip._bottom .Tooltip-content:after {
+        bottom: -8px
+    }
+
+.Tooltip._top .Tooltip-content {
+    top: 10px
+}
+
+    .Tooltip._top .Tooltip-content._dark:after {
+        border-bottom: 8px solid #364141;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        height: 0;
+        width: 0;
+        font-size: 0;
+        line-height: 0
+    }
+
+    .Tooltip._top .Tooltip-content._light:after, .Tooltip._top .Tooltip-content._network:after {
+        border-bottom: 8px solid #fff;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        height: 0;
+        width: 0;
+        font-size: 0;
+        line-height: 0
+    }
+
+    .Tooltip._top .Tooltip-content:after {
+        top: -8px
+    }
+
+.Tooltip._bottom._left .Tooltip-content, .Tooltip._top._left .Tooltip-content {
+    left: -10px
+}
+
+    .Tooltip._bottom._left .Tooltip-content:after, .Tooltip._bottom._left .Tooltip-content:before, .Tooltip._top._left .Tooltip-content:after, .Tooltip._top._left .Tooltip-content:before {
+        margin: 0;
+        left: 12px;
+        right: auto
+    }
+
+.Tooltip._bottom._right .Tooltip-content, .Tooltip._top._right .Tooltip-content {
+    right: -10px
+}
+
+    .Tooltip._bottom._right .Tooltip-content:after, .Tooltip._top._right .Tooltip-content:after {
+        margin: 0;
+        right: 12px;
+        left: auto
+    }
+
+.Tooltip.hasContentHoverDisabled {
+    pointer-events: none
+}
+
+.Popout {
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    display: inline-block;
+    position: relative
+}
+
+    .Popout:after {
+        display: table;
+        clear: both;
+        content: ""
+    }
+
+.Popout-content {
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    visibility: hidden;
+    position: absolute
+}
+
+.Popout--fullWidth {
+    display: block
+}
+
+    .Popout--fullWidth .Popout-content--fullWidth {
+        width: 100%
+    }
+
+.SelectInline {
+    white-space: nowrap;
+    line-height: 1;
+    display: inline-block
+}
+
+.SelectInline-select {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    border-bottom: 1px solid #c8cccc
+}
+
+.SelectInline-select-content {
+    color: #364141;
+    display: inline-flex;
+    align-items: center;
+    font-size: inherit;
+    font-weight: 600
+}
+
+.SelectInline-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px #2079c3,0 0 0 4px rgba(32,121,195,.3)
+}
+
+    .SelectInline-select:focus::-moz-focus-inner {
+        border: 0
+    }
+
+.SelectInline-icon {
+    padding-right: .5ch;
+    line-height: 0
+}
+
+.SelectInline-popout {
+    background-color: #fff;
+    position: relative;
+    z-index: 9999;
+    display: block;
+    min-width: 150px;
+    padding: 9px;
+    margin-top: -20px;
+    margin-left: -20px;
+    color: #364141;
+    text-transform: none;
+    border: 1px solid #dee1e1;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(39,51,51,.24);
+    animation: FadeInY .15s cubic-bezier(.4,0,.7,.2)
+}
+
+.SelectInline-secondaryaction {
+    padding: 9px 25px 5px;
+    margin: 10px -10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5384615385;
+    border-top: 1px solid #f3f4f4
+}
+
+.Menu {
+    position: relative
+}
+
+.Menu-headline-text {
+    font-size: 13px;
+    line-height: 1.641025641025641;
+    font-weight: 600;
+    padding: 8px;
+    color: #273333;
+    border-bottom: 1px solid #dee1e1
+}
+
+.Menu-list {
+    padding: 0;
+    list-style: none;
+    overflow-y: auto
+}
+
+.Menu-list, .MenuItem {
+    display: block;
+    margin: 0
+}
+
+.MenuItem {
+    font: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    width: 100%;
+    color: #364141;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    white-space: normal;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 6px;
+    padding: 8px
+}
+
+.MenuItem-container {
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+.MenuItem:focus, .MenuItem:hover {
+    background: #f3f4f4
+}
+
+.MenuItem:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px #2079c3,0 0 0 4px rgba(32,121,195,.3)
+}
+
+    .MenuItem:focus::-moz-focus-inner {
+        border: 0
+    }
+
+.MenuItem._selected, .MenuItem:active {
+    color: #fff;
+    background: #364141
+}
+
+    .MenuItem._selected:focus, .MenuItem._selected:hover {
+        color: #fff;
+        background: #273333
+    }
+
+.MenuItem._disabled {
+    color: #c8cccc;
+    background: none;
+    cursor: not-allowed
+}
+
+    .MenuItem._disabled:focus, .MenuItem._disabled:hover {
+        color: #c8cccc;
+        background: none
+    }
+
+    .MenuItem._disabled._selected {
+        color: #f3f4f4;
+        background: #dee1e1
+    }
+
+.MenuItem._subtext > .MenuItem-container {
+    align-items: flex-start
+}
+
+.MenuItem-arrow, .MenuItem-primary {
+    padding: 0;
+    line-height: 0
+}
+
+.MenuItem-primary {
+    margin-right: 8px
+}
+
+    .MenuItem-primary._spaceMediaRight {
+        margin-left: 8px
+    }
+
+.MenuItem-arrow {
+    text-align: right;
+    margin-left: 16px
+}
+
+.MenuItem-content {
+    min-width: 0;
+    overflow: hidden;
+    flex-grow: 1
+}
+
+.MenuItem-subtext._truncate, .MenuItem-text._truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.MenuItem-text {
+    font-size: 13px;
+    line-height: 1.641025641025641
+}
+
+.MenuItem-subtext {
+    font-size: 11px;
+    line-height: 1.696969696969697
+}
+
+.ToggleHint {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    color: currentColor
+}
+
+    .ToggleHint .Icon {
+        vertical-align: inherit
+    }
+
+    .ToggleHint._chevron {
+        transition: transform .3s cubic-bezier(.4,0,.2,1)
+    }
+
+        .ToggleHint._chevron.isOpen {
+            transform: rotate(180deg)
+        }
+
+.ToggleHint-icon-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0
+}
+
+.LanguagePicker {
+    text-align: center
+}
+
+    .LanguagePicker-label, .LanguagePicker ul {
+        display: inline-block
+    }
+
+.LanguagePicker-label {
+    font-size: 13px;
+    line-height: 1.641025641025641;
+    margin-right: 5px;
+    color: #929a9b
+}
+
+.LanguagePicker ul {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.LanguagePicker li {
+    font-size: 13px;
+    line-height: 1.641025641025641;
+    display: inline-block
+}
+
+    .LanguagePicker li > a {
+        color: #6e797a
+    }
+
+    .LanguagePicker li + li:before {
+        font-size: 16px;
+        line-height: 1.5;
+        display: inline-block;
+        padding: 0 2px;
+        color: #c8cccc;
+        vertical-align: middle;
+        content: "|"
+    }
+
+.Input {
+    position: relative
+}
+
+.Input-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #c8cccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #364141;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    outline: none;
+    transition: border-color .15s cubic-bezier(.4,0,.7,.2),box-shadow .15s cubic-bezier(.4,0,.7,.2)
+}
+
+    .Input-input:focus {
+        border-color: #2b87d3;
+        box-shadow: 0 2px 4px 1px rgba(43,135,211,.3)
+    }
+
+    .Input-input::placeholder {
+        color: #929a9b
+    }
+
+.Input.is-disabled {
+    opacity: .4
+}
+
+    .Input.is-disabled .Input-input {
+        cursor: not-allowed
+    }
+
+.Input.is-invalid .Input-input {
+    border-color: #c63434
+}
+
+    .Input.is-invalid .Input-input:focus {
+        border-color: #c63434;
+        box-shadow: 0 2px 4px 1px rgba(198,52,52,.3)
+    }
+
+.Input.is-elemBefore .Input-input {
+    padding-left: 40px
+}
+
+.Input.is-elemAfter .Input-input {
+    padding-right: 48px
+}
+
+.Input-elemAfter, .Input-elemBefore {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #929a9b;
+    transition: fill .15s cubic-bezier(.4,0,.7,.2)
+}
+
+.Input-elemBefore {
+    left: 16px
+}
+
+.Input-elemAfter {
+    right: 16px
+}
+
+.Label {
+    display: flex;
+    align-items: center;
+    color: #364141
+}
+
+.Label-elemAfter .Icon, .Label-elemBefore .Icon {
+    vertical-align: top
+}
+
+.Label-elemBefore {
+    margin-right: 4px
+}
+
+.Label-elemAfter {
+    margin-left: 4px
+}
+
+.FormField-input {
+    margin: 8px 0
+}
+
+.FormField-error, .FormField-icon {
+    color: #c63434
+}
+
+* {
+    box-sizing: border-box
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0
+}
+
+#signupContainer {
+    width: 100vw;
+    height: 100vh
+}
+
+@media (max-width:680px) {
+    #signupContainer .login-link {
+        display: none
+    }
+
+    #signupContainer .signup-start-trial {
+        font-size: 28px
+    }
+
+    #signupContainer .main-content {
+        width: 100%;
+        padding: 100px 12px 12px
+    }
+
+    #signupContainer .no-credit-card {
+        font-size: 20px
+    }
+
+    #signupContainer .name-container {
+        flex-direction: column
+    }
+
+        #signupContainer .name-container > div {
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0
+        }
+
+            #signupContainer .name-container > div:first-of-type {
+                margin-bottom: 16px
+            }
+
+    #signupContainer .submit-button {
+        width: 100%
+    }
+
+    #signupContainer .image-holder img {
+        margin-left: 12px;
+        margin-right: 12px
+    }
+
+        #signupContainer .image-holder img:nth-of-type(n+7) {
+            display: none
+        }
+}
